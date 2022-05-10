@@ -16,13 +16,13 @@ if ((typeof port == 'undefined') || (port === null)){
 }
 
 /* Set up our static file web server to deliver files from the filesytem */
-let files = new static.Server(directory);
+let file = new static.Server(directory);
 
 let app = http.createServer(
     function (request,response){
        request.addListener ('end',
             function(){
-                file.serve(request,response);
+                files.serve(request,response);
             }
             
         ).resume();
