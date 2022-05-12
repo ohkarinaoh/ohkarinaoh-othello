@@ -197,7 +197,7 @@ io.on('connection', (socket) => {
         /* Handle the command */
         let response = {};
         response.result = 'success';
-        response.result = username;
+        response.username = username;
         response.room = room;
         response.message = message;
         /* Tell everyone in the room what the message is */
