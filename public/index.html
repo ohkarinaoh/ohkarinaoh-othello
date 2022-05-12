@@ -16,7 +16,7 @@
     </style>
     <script>
       function goToLobby(){
-        let username = $('#nameInput').val();
+        let username = encodeURI($('#nameInput').val());
         window.location.href = "lobby.html?username="+username;
       }
     </script>
@@ -52,7 +52,7 @@
             </div>
         </div>
       </div>
-      <div class="row m-3">
+      <div class="row">
         <div class="col text-center">
           <img class="img-fluid" src="assets/images/bottom-splash.png" alt="Reversi Logo 2"/>
 
