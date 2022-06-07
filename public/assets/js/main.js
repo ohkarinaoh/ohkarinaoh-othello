@@ -29,7 +29,7 @@ socket.on('log',function(array) {
 });
 
 function makeInviteButton(socket_id) {
-    let newHTML = "<button type='button' class='btn btn-outline-primary'>Invite</button>";
+    let newHTML = "<button type='button' class='btn btn-primary'>Invite</button>";
     let newNode = $(newHTML);
     newNode.click( ()=> {
         let payload = {
@@ -43,7 +43,7 @@ function makeInviteButton(socket_id) {
 }
 
 function makeInvitedButton(socket_id) {
-    let newHTML = "<button type='button' class='btn btn-primary'>Invited</button>";
+    let newHTML = "<button type='button' class='btn btn-outline-primary'>Uninvite</button>";
     let newNode = $(newHTML);
     newNode.click( ()=> {
         let payload = {
@@ -474,7 +474,8 @@ $( () => {
     socket.emit('join_room',request);
 
     $("#lobbyTitle").html(username + "'s Lobby");
-    $("#quit").html("<a href='lobby.html?username=" + username + "' class='btn btn-danger' role='button'>Quit</a>");
+            
+    $("#quit").html("<a class='text-nowrap' style='padding-right: 10px;' href='https://en.wikipedia.org/wiki/Reversi'>Rules</a><a href='lobby.html?username=" + username + "' class='btn btn-danger' role='button'>Quit</a>");
 
 
     $('#chatMessage').keypress( function (e){
