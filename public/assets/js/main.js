@@ -475,7 +475,7 @@ $( () => {
 
     $("#lobbyTitle").html(username + "'s Lobby");
             
-    $("#quit").html("<a class='text-nowrap' style='padding-right: 10px;' href='https://en.wikipedia.org/wiki/Reversi'>Rules</a><a href='lobby.html?username=" + username + "' class='btn btn-danger' role='button'>Quit</a>");
+    $("#quit").html("<a class='text-nowrap' style='padding-right: 10px;' href='https://en.wikipedia.org/wiki/Reversi' target='_new'>Rules</a><a href='lobby.html?username=" + username + "' class='btn btn-danger' role='button'>Quit</a>");
 
 
     $('#chatMessage').keypress( function (e){
